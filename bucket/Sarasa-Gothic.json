@@ -1,0 +1,28 @@
+{
+    "version": "0.8.1",
+    "homepage": "https://github.com/be5invis/Sarasa-Gothic",
+    "license": "OFL-1.1",
+    "url": "https://dev.tencent.com/u/gegb/p/Sarasa-Gothic/git/raw/master/sarasa-gothic-ttf-0.8.1.7z",
+    "hash": "00f8bceecd76befd929f89a2b4cc7e870e3a90f78a568acc96a9b2616a6fc6cb",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://dev.tencent.com/u/gegb/p/Sarasa-Gothic/git/raw/master/sarasa-gothic-ttf-$version.7z"
+    },
+    "installer": {
+        "script": [
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
+            "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
+            "}"
+        ]
+    },
+    "uninstaller": {
+        "script": [
+            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
+            "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
+            "}",
+            "Write-Host \"The 'Sarasa-Gothic' Font family has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta"
+        ]
+    }
+}
