@@ -27,7 +27,7 @@
         }
     },
     "checkver": {
-        "url": "https://golang.org/dl/",
+        "url": "https://golang.google.cn/dl/",
         "regex": "go([\\d.]+)\\."
     },
     "autoupdate": {
