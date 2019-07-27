@@ -1,0 +1,15 @@
+{
+    "version": "1.12.0.28",
+    "homepage": "https://minecraft.net",
+    "license": "EULA",
+    "url": "https://minecraft.azureedge.net/bin-win/bedrock-server-1.12.0.28.zip",
+    "hash": "5f979b8325309f6dbf65cf544146460ab27bc65204653a54ac1327041fb27538",
+    "bin": "bedrock_server.exe",
+    "checkver": {
+        "url": "https://www.minecraft.net/zh-hans/download/server/bedrock",
+        "regex": "bedrock-server-([0-9\\d.]+).zip"
+    },
+    "autoupdate": {
+        "url": "https://minecraft.azureedge.net/bin-win/bedrock-server-$version.zip"
+    }
+}
