@@ -1,0 +1,47 @@
+{
+    "version": "1.18.3",
+    "homepage": "https://github.com/rust-lang/rustup.rs",
+    "license": "MIT",
+    "persist": [
+        ".cargo",
+        ".rustup",
+        ".cargo-install"
+    ],
+    "env_add_path": [
+        ".cargo\\bin",
+        ".cargo-install\\bin"
+    ],
+    "env_set": {
+        "CARGO_HOME": "$dir\\.cargo",
+        "RUSTUP_HOME": "$dir\\.rustup",
+        "CARGO_INSTALL_ROOT": "$dir\\.cargo-install"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://win.rustup.rs/x86_64#/rustup-init.exe",
+            "hash": "9da383c67914eef4b8f880cb8e6d75f623f1261a08ed791a0404c3ebca8c3a5a"
+        }
+    },
+    "checkver": {
+        "github": "https://github.com/rust-lang/rustup.rs"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://win.rustup.rs/x86_64#/rustup-init.exe"
+            }
+        }
+    },
+    "post_install": [
+        "# Create environment variables for this process",
+        "$env:CARGO_HOME = \"$persist_dir\\.cargo\"",
+        "$env:RUSTUP_HOME = \"$persist_dir\\.rustup\"",
+        "# Install Rustup",
+        "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
+    ],
+    "notes": [
+        "To use the MSVC ABI without Visual Studio 2015 (or higher) installed,",
+        "you will need the Visual Studio 2019 Build Tools:",
+        "https://www.visualstudio.com/downloads"
+    ]
+}
