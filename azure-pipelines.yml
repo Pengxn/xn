@@ -1,0 +1,17 @@
+# Azure Pipelines configuration
+pool:
+  vmImage: VS2017-Win2016
+
+steps:
+- powershell: |
+    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+  displayName: Install Scoop
+- powershell: |
+    Copy-Item -Path . -Destination $env:SCOOP\buckets\xn -Recurse
+  displayName: Copy self as bucket
+- powershell: |
+    .\bin\Check-Version.ps1
+  displayName: Check version of apps in bucket
+- powershell: |
+    .\test\Install-Test.ps1
+  displayName: Test process installing apps
