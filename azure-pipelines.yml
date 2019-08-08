@@ -8,7 +8,13 @@ steps:
   displayName: Install Scoop
 - powershell: |
     Copy-Item -Path . -Destination $env:SCOOP\buckets\xn -Recurse
-  displayName: Copy self as bucket
+    $USER = [EnvironmentVariableTarget]::User
+    $OLD_PATH = [Environment]::GetEnvironmentVariable('Path', $USER)
+    $NEW_PATH += $OLD_PATH + ";" + "$env:SCOOP\shims"
+    [Environment]::SetEnvironmentVariable('Path', $OLD_PATH, $USER)
+    echo "SCOOP is $env:SCOOP"
+    echo "Path is $env:Path"
+  displayName: Copy self as bucket and refresh env
 - powershell: |
     .\bin\Check-Version.ps1
   displayName: Check version of apps in bucket
