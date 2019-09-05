@@ -1,5 +1,5 @@
 {
-    "version": "1.12.9",
+    "version": "1.13",
     "homepage": "https://golang.org",
     "description": "Go is an open source programming language.",
     "license": "BSD-3-Clause",
@@ -18,8 +18,8 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/go/go1.12.9.windows-amd64.zip",
-            "hash": "ec7550b32ff080b17060b9d4fde7bee94d9cf3c42e846e3a62fe4a3047ec79e3"
+            "url": "https://dl.google.com/go/go1.13.windows-amd64.zip",
+            "hash": "7d162b83157d3171961f8e05a55b7da8476244df3fac28a5da1c9e215acfea89"
         }
     },
     "checkver": {
