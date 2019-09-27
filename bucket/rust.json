@@ -1,7 +1,7 @@
 {
-    "version": "1.18.3",
+    "version": "1.19.0",
     "homepage": "https://github.com/rust-lang/rustup.rs",
-    "license": "MIT",
+    "license": "MIT|Apache-2.0",
     "persist": [
         ".cargo",
         ".rustup",
@@ -19,7 +19,7 @@
     "architecture": {
         "64bit": {
             "url": "https://win.rustup.rs/x86_64#/rustup-init.exe",
-            "hash": "9da383c67914eef4b8f880cb8e6d75f623f1261a08ed791a0404c3ebca8c3a5a"
+            "hash": "e325b428a0ff9132b59ec586e85b1db4eaa66acc13b3daf8090520d2e7694388"
         }
     },
     "checkver": {
