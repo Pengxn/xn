@@ -2,15 +2,15 @@
     "version": "0.10.2",
     "homepage": "https://github.com/be5invis/Sarasa-Gothic",
     "license": "OFL-1.1",
-    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.10.2/sarasa-gothic-ttf-0.10.2.7z",
-    "hash": "bb0fe2475350b503a410b5bc5e281fa28151636a7f38b5b2fa5f33867fb0a1b4",
+    "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v0.10.2/sarasa-gothic-ttc-0.10.2.7z",
+    "hash": "888f998869840e982c5478d9aa40494cf83e9aaa85de3c0a8834537f64092d16",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttf-$version.7z"
+        "url": "https://github.com/be5invis/Sarasa-Gothic/releases/download/v$version/sarasa-gothic-ttc-$version.7z"
     },
     "installer": {
         "script": [
-            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'sarasa-*.ttc' | ForEach-Object {",
             "  New-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Value $_.Name -Force | Out-Null",
             "  Copy-Item $_.FullName -destination \"$env:windir\\Fonts\"",
             "}"
@@ -18,7 +18,7 @@
     },
     "uninstaller": {
         "script": [
-            "Get-ChildItem $dir -filter 'sarasa*.ttf' | ForEach-Object {",
+            "Get-ChildItem $dir -filter 'sarasa-*.ttc' | ForEach-Object {",
             "  Remove-ItemProperty -Path 'HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts' -Name $_.Name.Replace($_.Extension, ' (TrueType)') -Force -ErrorAction SilentlyContinue",
             "  Remove-Item \"$env:windir\\Fonts\\$($_.Name)\" -Force -ErrorAction SilentlyContinue",
             "}",
