@@ -4,7 +4,6 @@ pool:
 
 steps:
 - pwsh: |
-    Set-Executionpolicy RemoteSigned -Scope CurrentUser
     iwr -useb get.scoop.sh | iex
   displayName: Install Scoop
 - pwsh: |
