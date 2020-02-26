@@ -4,7 +4,8 @@ pool:
 
 steps:
 - powershell: |
-    iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+    Set-Executionpolicy RemoteSigned -Scope CurrentUser
+    iwr -useb get.scoop.sh | iex
   displayName: Install Scoop
 - powershell: |
     Copy-Item -Path . -Destination $env:SCOOP\buckets\xn -Recurse
