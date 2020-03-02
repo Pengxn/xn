@@ -3,7 +3,7 @@
 $Files = $(git show --pretty="" --name-only) -Split "\n"
 $APPS_CHANGED = @()
 
-foreach($_ in $Files) {
+foreach ($_ in $Files) {
     if ($_ -like "bucket*") {
         $Name = $_ -Replace "bucket/" -Replace ".json"
         $APPS_CHANGED += $Name
