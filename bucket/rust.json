@@ -1,6 +1,6 @@
 {
     "version": "1.21.1",
-    "homepage": "https://github.com/rust-lang/rustup.rs",
+    "homepage": "https://github.com/rust-lang/rustup",
     "description": "Manage multiple rust installations with ease",
     "license": "MIT|Apache-2.0",
     "persist": [
@@ -36,8 +36,8 @@
     },
     "post_install": [
         "# Create environment variables for this process",
-        "$env:CARGO_HOME = \"$persist_dir\\.cargo\"",
-        "$env:RUSTUP_HOME = \"$persist_dir\\.rustup\"",
+        "[Environment]::SetEnvironmentVariable('CARGO_HOME', \"$persist_dir\\.cargo\", 'Process')",
+        "[Environment]::SetEnvironmentVariable('RUSTUP_HOME', \"$persist_dir\\.rustup\", 'Process')",
         "# Install Rustup",
         "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
     ],
