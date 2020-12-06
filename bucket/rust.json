@@ -1,5 +1,5 @@
 {
-    "version": "1.22.1",
+    "version": "1.23.1",
     "homepage": "https://github.com/rust-lang/rustup",
     "description": "Manage multiple rust installations with ease",
     "license": "MIT|Apache-2.0",
@@ -19,8 +19,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://static.rust-lang.org/rustup/archive/1.22.1/x86_64-pc-windows-gnu/rustup-init.exe",
-            "hash": "dff949802997c005128f5e3c21a9e1eaf0b9958cf42d7414e361b5c24ff69332"
+            "url": "https://static.rust-lang.org/rustup/archive/1.23.1/x86_64-pc-windows-gnu/rustup-init.exe",
+            "hash": "beddae8ff6830419b5d24d719a6ef1dd67a280fe8e799963b257467ffc205560"
         }
     },
     "checkver": "github",
@@ -37,13 +37,13 @@
     "post_install": [
         "# Create environment variables for this process",
         "[Environment]::SetEnvironmentVariable('CARGO_HOME', \"$persist_dir\\.cargo\", 'Process')",
-        "[Environment]::SetEnvironmentVariable('RUSTUP_HOME', \"$persist_dir\\.rustup\", 'Process')",
-        "# Install Rustup",
-        "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
+        "[Environment]::SetEnvironmentVariable('RUSTUP_HOME', \"$persist_dir\\.rustup\", 'Process')"
     ],
     "notes": [
         "To use the MSVC ABI without Visual Studio 2015 (or higher) installed,",
         "you will need the Visual Studio 2019 Build Tools:",
-        "https://www.visualstudio.com/downloads"
+        "https://www.visualstudio.com/downloads",
+        "You can install rustup and rust-toolchain by:",
+        "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
     ]
 }
