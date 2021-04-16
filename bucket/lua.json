@@ -1,17 +1,25 @@
 {
-    "version": "5.3.5",
+    "version": "5.4.2",
     "homepage": "https://www.lua.org",
     "license": "MIT",
     "bin": [
         [
-            "lua53.exe",
+            "lua54.exe",
             "lua"
+        ],
+        [
+            "luac54.exe",
+            "luac"
+        ],
+        [
+            "wlua54.exe",
+            "wlua"
         ]
     ],
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/luabinaries/5.3.5/Tools%20Executables/lua-5.3.5_Win64_bin.zip",
-            "hash": "ca117293aba74a0959a3643e8509a152555dbf9c46f1ffb7735e32048acd2da5"
+            "url": "https://downloads.sourceforge.net/project/luabinaries/5.4.2/Tools%20Executables/lua-5.4.2_Win64_bin.zip",
+            "hash": "5f1e1385ed95a3643f7ed67c4f3767942b2f0f388b66f63e5667e9c3d96293f5"
         }
     },
     "checkver": {
