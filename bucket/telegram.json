@@ -1,10 +1,10 @@
 {
-    "version": "2.7.1",
+    "version": "2.7.4",
     "homepage": "https://telegram.org",
     "description": "A messaging app with a focus on speed and security.",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v2.7.1/tportable.2.7.1.zip",
-    "hash": "6120326c326aa5671733443dfc661bcf472a4294debcfc92cb1dd5aa2b70ae5a",
+    "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v2.7.4/tportable-x64.2.7.4.zip",
+    "hash": "da68020e260e8518221e0e42d85ec38e696b1ff284110c647fbad678c2caaf7a",
     "extract_dir": "Telegram",
     "persist": "tdata",
     "shortcuts": [
@@ -17,6 +17,6 @@
         "github": "https://github.com/telegramdesktop/tdesktop"
     },
     "autoupdate": {
-        "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable.$version.zip"
+        "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable-x64.$version.zip"
     }
 }
