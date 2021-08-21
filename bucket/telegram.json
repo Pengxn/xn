@@ -1,9 +1,9 @@
 {
-    "version": "2.7.4",
+    "version": "2.9.2",
     "homepage": "https://telegram.org",
     "description": "A messaging app with a focus on speed and security.",
     "license": "GPL-3.0-only",
-    "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v2.7.4/tportable-x64.2.7.4.zip",
+    "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v2.9.2/tportable-x64.2.9.2.zip",
     "hash": "da68020e260e8518221e0e42d85ec38e696b1ff284110c647fbad678c2caaf7a",
     "extract_dir": "Telegram",
     "persist": "tdata",
