@@ -1,6 +1,10 @@
 # VS Code
 .vscode
 
+# JetBrains IDEs
+.idea/
+*.iml
+
 # OS X
 .DS_Store
 ._*
