@@ -12,6 +12,6 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# Matches the exact *.yml files
-[*.yml]
+# Matches the exact *.y(a)ml files
+[*.{yml,yaml}]
 indent_size = 2
