@@ -10,7 +10,7 @@
     "env_set": {
         "GOROOT": "$dir",
         "GOPATH": "$dir\\.go",
-        "GOPROXY": "https://goproxy.io,direct"
+        "GOPROXY": "https://goproxy.cn,direct"
     },
     "env_add_path": [
         "bin",
