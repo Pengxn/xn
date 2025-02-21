@@ -2,7 +2,7 @@
 
 param(
     [String[]]
-    $Hash = "" # specify commit hash to test
+    $Hash # specify commit hash to test
 )
 
 $Files = $(git show $Hash --pretty="" --name-only) -Split "\n"
