@@ -19,9 +19,11 @@ jobs:
         shell: powershell
         run: scoop bucket add xn https://github.com/Pengxn/xn
 
-      - name: Init and Test
+      - name: Check Version and Test
         shell: powershell
-        run: .\test\Install-Test.ps1
+        run: |
+          .\bin\Check-Version.ps1
+          .\test\Install-Test.ps1
 
   test-pwsh:
     name: Test PowerShell Core
@@ -32,11 +34,15 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
 
       - name: Install xn bucket
         shell: powershell
         run: scoop bucket add xn https://github.com/Pengxn/xn
 
-      - name: Init and Test
+      - name: Check Version and Test
         shell: pwsh
-        run: .\test\Install-Test.ps1
+        run: |
+          .\bin\Check-Version.ps1
+          .\test\Install-Test.ps1
