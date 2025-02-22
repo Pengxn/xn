@@ -1,0 +1,40 @@
+name: test
+
+on: [push, pull_request]
+
+jobs:
+  test-powershell:
+    name: Test WindowsPowerShell
+    runs-on: windows-latest
+    steps:
+      - name: Setup Scoop
+        uses: MinoruSekine/setup-scoop@v4
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xn bucket
+        shell: powershell
+        run: scoop bucket add xn https://github.com/Pengxn/xn
+
+      - name: Init and Test
+        shell: powershell
+        run: .\test\Install-Test.ps1
+
+  test-pwsh:
+    name: Test PowerShell Core
+    runs-on: windows-latest
+    steps:
+      - name: Setup Scoop
+        uses: MinoruSekine/setup-scoop@v4
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install xn bucket
+        shell: powershell
+        run: scoop bucket add xn https://github.com/Pengxn/xn
+
+      - name: Init and Test
+        shell: pwsh
+        run: .\test\Install-Test.ps1
