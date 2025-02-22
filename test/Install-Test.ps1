@@ -5,10 +5,10 @@ param(
     $Hash # specify commit hash to test
 )
 
-$Files = $(git show $Hash --pretty="" --name-only) -Split "\n"
+$FILES_CHANGED = $(git show $Hash --pretty="" --name-only) -Split "\n"
 $APPS_CHANGED = @()
 
-foreach ($_ in $Files) {
+foreach ($_ in $FILES_CHANGED) {
     if ($_ -like "bucket*") {
         $Name = $_ -Replace "bucket/" -Replace ".json"
         $APPS_CHANGED += $Name
@@ -17,8 +17,10 @@ foreach ($_ in $Files) {
 
 Write-Output "Apps changed: $APPS_CHANGED"
 
+$BUCKET_NAME = "xn"
+
 # One by one, install app that have been changed as test.
 foreach ($APP in $APPS_CHANGED) {
     Write-Output "Test installing $APP..."
-    scoop install xn/$APP
+    scoop install $BUCKET_NAME/$APP
 }
