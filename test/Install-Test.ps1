@@ -15,12 +15,18 @@ foreach ($_ in $FILES_CHANGED) {
     }
 }
 
-Write-Output "Apps changed: $APPS_CHANGED"
+# no apps changed to install test
+if ($APPS_CHANGED.Count -eq 0) {
+    Write-Host "No apps changed." -ForegroundColor Green
+    exit 0
+}
+
+Write-Host "Apps changed: $APPS_CHANGED" -ForegroundColor DarkYellow
 
 $BUCKET_NAME = "xn"
 
 # One by one, install app that have been changed as test.
 foreach ($APP in $APPS_CHANGED) {
-    Write-Output "Test installing $APP..."
+    Write-Host "Test installing $APP" -ForegroundColor Cyan
     scoop install $BUCKET_NAME/$APP
 }
