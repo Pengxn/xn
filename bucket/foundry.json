@@ -1,0 +1,32 @@
+{
+    "version": "1.0.0",
+    "homepage": "https://getfoundry.sh",
+    "description": "Foundry is a toolkit for Ethereum application development.",
+    "license": "MIT|Apache-2.0",
+    "env_add_path": ".",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/foundry-rs/foundry/releases/download/v1.0.0/foundry_v1.0.0_win32_amd64.zip",
+            "hash": "a2408d984e97d8088461117e5c1d6470ca5bf97d864dbb9fc73269258e3d23a0"
+        }
+    },
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/foundry-rs/foundry/refs/heads/master/Cargo.toml",
+        "regex": "version = \"([0-9.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/foundry-rs/foundry/releases/download/v$version/foundry_v$version_win32_amd64.zip"
+            }
+        }
+    },
+    "notes": [
+        "\"$dir\" has been added to your PATH.",
+        "Foundry inclde the following tools:",
+        "  * forge  - Build, test, fuzz, debug and deploy Solidity contracts.",
+        "  * cast   - A cli for interacting with EVM smart contracts.",
+        "  * anvil  - Fast local Ethereum development node.",
+        "  * chisel - Fast, utilitarian, and verbose Solidity REPL."
+    ]
+}
