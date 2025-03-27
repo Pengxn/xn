@@ -1,0 +1,30 @@
+{
+    "version": "0.14.0",
+    "description": "Zig is a general-purpose programming language.",
+    "homepage": "https://ziglang.org/",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://ziglang.org/download/0.14.0/zig-windows-x86_64-0.14.0.zip",
+            "hash": "f53e5f9011ba20bbc3e0e6d0a9441b31eb227a97bac0e7d24172f1b8b27b4371",
+            "extract_dir": "zig-windows-x86_64-0.14.0"
+        }
+    },
+    "bin": "zig.exe",
+    "checkver": {
+        "url": "https://ziglang.org/download/",
+        "regex": ">([\\d.]+)</h"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://ziglang.org/download/$version/zig-windows-x86_64-$version.zip",
+                "extract_dir": "zig-windows-x86_64-$version"
+            }
+        },
+        "hash": {
+            "url": "https://ziglang.org/download/index.json",
+            "regex": "(?s)$basename.*?$sha256"
+        }
+    }
+}
