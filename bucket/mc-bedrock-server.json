@@ -1,10 +1,10 @@
 {
-    "version": "1.21.71.01",
+    "version": "1.21.72.01",
     "homepage": "https://minecraft.net",
     "description": "Minecraft Bedrock Server",
     "license": "EULA",
-    "url": "https://www.minecraft.net/bedrockdedicatedserver/bin-win/bedrock-server-1.21.71.01.zip",
-    "hash": "665c3404230ab57b39e59586e6c3b03a5657057308ccdb9ac97789054aacfcbb",
+    "url": "https://www.minecraft.net/bedrockdedicatedserver/bin-win/bedrock-server-1.21.72.01.zip",
+    "hash": "19d78e9adb62c953838d69535f2f4fac2849fbfa90457036ea6ad20274cd59a7",
     "shortcuts": [
         [
             "bedrock_server.exe",
