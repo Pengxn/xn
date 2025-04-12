@@ -11,6 +11,11 @@ $APPS_CHANGED = @()
 foreach ($_ in $FILES_CHANGED) {
     if ($_ -like "bucket*") {
         $Name = $_ -Replace "bucket/" -Replace ".json"
+        if ($Name -eq "mc-bedrock-server") {
+            # skip mc-bedrock-server, can't download by scoop default user-agent
+            Write-Host "Skip $Name" -ForegroundColor DarkYellow
+            continue
+        }
         $APPS_CHANGED += $Name
     }
 }
