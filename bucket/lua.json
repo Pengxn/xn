@@ -23,8 +23,7 @@
         }
     },
     "checkver": {
-        "url": "https://www.lua.org",
-        "regex": "Lua ([0-9\\d.]+)"
+        "github": "https://github.com/lua/lua"
     },
     "autoupdate": {
         "architecture": {
