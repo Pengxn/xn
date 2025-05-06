@@ -1,5 +1,5 @@
 {
-    "version": "1.28.1",
+    "version": "1.28.2",
     "homepage": "https://github.com/rust-lang/rustup",
     "description": "Manage multiple rust installations with ease",
     "license": "MIT|Apache-2.0",
@@ -19,8 +19,8 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://static.rust-lang.org/rustup/archive/1.28.1/x86_64-pc-windows-gnu/rustup-init.exe",
-            "hash": "f47cee05c484fb4dc89267e25f9f2f64e18ac5c03a72bec04d01d3b903a27c9b"
+            "url": "https://static.rust-lang.org/rustup/archive/1.28.2/x86_64-pc-windows-gnu/rustup-init.exe",
+            "hash": "ccbfd951d8024856043b3a0c3903a59f39937bce8d3074768b0d3da55f21e817"
         }
     },
     "checkver": {
