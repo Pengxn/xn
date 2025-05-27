@@ -1,13 +1,13 @@
 {
-    "version": "1.2.0",
+    "version": "1.2.1",
     "homepage": "https://getfoundry.sh",
     "description": "Foundry is a toolkit for Ethereum application development.",
     "license": "MIT|Apache-2.0",
     "env_add_path": ".",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/foundry-rs/foundry/releases/download/v1.2.0/foundry_v1.2.0_win32_amd64.zip",
-            "hash": "efbd39338229a51aa722eb2023c014dfda385031b9336f253e19d65d845c19cb"
+            "url": "https://github.com/foundry-rs/foundry/releases/download/v1.2.1/foundry_v1.2.1_win32_amd64.zip",
+            "hash": "40d1770d4ad4a9776dcebd4be93149b495f5e1f95f4932e199f67d0b7e7732ab"
         }
     },
     "checkver": {
