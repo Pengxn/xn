@@ -11,8 +11,8 @@
         }
     },
     "checkver": {
-        "url": "https://raw.githubusercontent.com/foundry-rs/foundry/refs/heads/master/Cargo.toml",
-        "regex": "version = \"([0-9.]+)\""
+        "url": "https://github.com/foundry-rs/foundry/releases/latest",
+        "regex": "tag/v([0-9.]+)"
     },
     "autoupdate": {
         "architecture": {
