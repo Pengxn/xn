@@ -44,9 +44,11 @@
     ],
     "notes": [
         "To use the MSVC ABI without Visual Studio 2015 (or higher) installed,",
-        "you will need the Visual Studio 2019 Build Tools:",
-        "https://www.visualstudio.com/downloads",
-        "You can install rustup and rust-toolchain by:",
-        "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-toolchain stable-gnu"
+        "you will need the Microsoft C++ Build Tools:",
+        "https://visualstudio.microsoft.com/visual-cpp-build-tools/",
+        "You can install rust with MSVC by running:",
+        "& \"$dir\\rustup-init.exe\" -y --no-modify-path",
+        "You can install rust with GNU by running:",
+        "& \"$dir\\rustup-init.exe\" -y --no-modify-path --default-host x86_64-pc-windows-gnu"
     ]
 }
