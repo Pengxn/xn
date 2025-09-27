@@ -1,0 +1,28 @@
+{
+    "version": "2.3.4",
+    "description": "Simple, easy-to-use database manager",
+    "homepage": "https://dataflare.app",
+    "license": "Unknown",
+    "architecture": {
+        "64bit": {
+            "url": "https://assets.dataflare.app/release/windows/x86_64/Dataflare-Setup-2.3.4.exe#/dl.7z",
+            "hash": "85d12c18ec4bc3b55dd7aa9ef12853d1153d9d6442ce1c7ff50a04bb22a4dacb"
+        }
+    },
+    "shortcuts": [
+        [
+            "dataflare.exe",
+            "Dataflare"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/DataflareApp/Dataflare"
+    },
+    "autoupdate":{
+        "architecture": {
+            "64bit": {
+                "url": "https://assets.dataflare.app/release/windows/x86_64/Dataflare-Setup-$version.exe#/dl.7z"
+            }
+        }
+    }
+}
