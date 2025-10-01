@@ -9,6 +9,7 @@
             "hash": "66cafb00571a8e2ff32bc52db70e828e16a124e7fe5eda79802a06b427679122"
         }
     },
+    "pre_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninst*\" -Force -Recurse",
     "shortcuts": [
         [
             "dataflare.exe",
