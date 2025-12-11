@@ -37,7 +37,7 @@
     "notes": [
         "Your GOROOT has been set to: $dir,",
         "and GOPATH has been set to: $dir\\.go,",
-        "and GOPROXY has been set to: https://goproxy.io.",
+        "and GOPROXY has been set to: https://goproxy.cn.",
         "You can run 'go env' to view these at any time.",
         "\"$dir\\bin\" and \"$dir\\.go\\bin\" has been added to your PATH."
     ]
