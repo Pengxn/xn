@@ -1,12 +1,12 @@
 {
-    "version": "1.16.1",
+    "version": "1.16.2",
     "homepage": "https://tigervnc.org",
     "description": "TigerVNC is a platform-neutral implementation of VNC.",
     "license": "GPL-2.0-only",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.1/tigervnc64-1.16.1.exe",
-            "hash": "b9ae3d941d6a69c12aea97bbb920886994c69937aa87c8a7a3203777ceacb297"
+            "url": "https://downloads.sourceforge.net/project/tigervnc/stable/1.16.2/tigervnc64-1.16.2.exe",
+            "hash": "96a0117c8d0d55ea2e2c20e3d9d9a798011da8c5a813a35cd0b9e006d58bb7f4"
         }
     },
     "innosetup": true,
