@@ -1,6 +1,6 @@
 {
     "version": "1.19.21",
-    "description": "A rule based proxy in Go.",
+    "description": "A rule based proxy in Go, formerly known as Clash.Meta.",
     "homepage": "https://github.com/MetaCubeX/mihomo",
     "license": "GPL-3.0-or-later",
     "architecture": {
@@ -18,5 +18,9 @@
                 "url": "https://github.com/MetaCubeX/mihomo/releases/download/v$version/mihomo-windows-amd64-v3-go125-v$version.zip"
             }
         }
-    }
+    },
+    "notes": [
+        "If you want to use TUN mode, please run mihomo with administrator privileges.",
+        "The default config and cached files are stored in $HOME\\.config\\mihomo."
+    ]
 }
