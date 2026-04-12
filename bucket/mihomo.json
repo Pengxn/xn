@@ -20,6 +20,8 @@
         }
     },
     "notes": [
+        "Manually disable auto-update in the following way:",
+        "Settings -> Advanced -> Version and updates -> disable \"update automatically\"",
         "If you want to use TUN mode, please run mihomo with administrator privileges.",
         "The default config and cached files are stored in $HOME\\.config\\mihomo."
     ]
