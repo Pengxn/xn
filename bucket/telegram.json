@@ -26,5 +26,9 @@
                 "url": "https://github.com/telegramdesktop/tdesktop/releases/download/v$version/tportable-x64.$version.zip"
             }
         }
-    }
+    },
+    "notes": [
+        "Manually disable auto-update in the following way:",
+        "Settings -> Advanced -> Version and updates -> disable \"update automatically\""
+    ]
 }
