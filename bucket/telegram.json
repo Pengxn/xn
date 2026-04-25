@@ -29,6 +29,7 @@
     },
     "notes": [
         "Manually disable auto-update in the following way:",
-        "Settings -> Advanced -> Version and updates -> disable \"update automatically\""
+        "Settings -> Advanced -> Version and updates -> disable \"update automatically\"",
+        "The default cached files are stored in $HOME\\Downloads\\Telegram Desktop."
     ]
 }
