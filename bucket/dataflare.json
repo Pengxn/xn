@@ -17,7 +17,8 @@
         ]
     ],
     "checkver": {
-        "github": "https://github.com/DataflareApp/Dataflare"
+        "url": "https://github.com/DataflareApp/dataflare/blob/main/CHANGELOG.md",
+        "regex": "## v([0-9.]+)"
     },
     "autoupdate":{
         "architecture": {
