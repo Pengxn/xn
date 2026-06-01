@@ -1,12 +1,12 @@
 {
-    "version": "1.19.25",
+    "version": "1.19.26",
     "description": "A rule based proxy in Go, formerly known as Clash.Meta.",
     "homepage": "https://github.com/MetaCubeX/mihomo",
     "license": "GPL-3.0-or-later",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.25/mihomo-windows-amd64-v3-go125-v1.19.25.zip",
-            "hash": "94ecde6e62a12d1820734afc33ebcc1c80c4eb1d2a44436a6c076b201f4364a3"
+            "url": "https://github.com/MetaCubeX/mihomo/releases/download/v1.19.26/mihomo-windows-amd64-v3-go125-v1.19.26.zip",
+            "hash": "ea4d08288581641738e3face6b5b5e1d8cfaa2de11ebe67952a6850de87b02cf"
         }
     },
     "pre_install": "Get-ChildItem \"$dir\\mihomo*.exe\" | Rename-Item -NewName 'mihomo.exe'",
@@ -24,4 +24,3 @@
         "The default config and cached files are stored in $HOME\\.config\\mihomo."
     ]
 }
-
