@@ -23,7 +23,7 @@
     },
     "notes": [
         "\"$dir\" has been added to your PATH.",
-        "Foundry inclde the following tools:",
+        "Foundry includes the following tools:",
         "  * forge  - Build, test, fuzz, debug and deploy Solidity contracts.",
         "  * cast   - A cli for interacting with EVM smart contracts.",
         "  * anvil  - Fast local Ethereum development node.",
