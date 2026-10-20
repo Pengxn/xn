@@ -10,6 +10,19 @@
             "extract_dir": "PFiles64\\Cloudflare\\Cloudflare WARP"
         }
     },
+    "post_install": [
+        "'install-context', 'uninstall-context' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\xn\\scripts\\cloudflare-one\\$_.reg\") {",
+        "        $cfdir = \"$dir\".Replace('\\', '\\\\')",
+        "        $content = (Get-Content \"$bucketsdir\\xn\\scripts\\cloudflare-one\\$_.reg\").Replace('$cfdir', $cfdir)",
+        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
+        "    }",
+        "}",
+        "if (Test-Path \"$dir\\install-context.reg\") {",
+        "    reg import \"$dir\\install-context.reg\"",
+        "}"
+    ],
     "bin": [
         "warp-cli.exe",
         "warp-dex.exe",
@@ -23,6 +36,9 @@
             "Cloudflare WARP"
         ]
     ],
+    "pre_uninstall": [
+        "if ($cmd -eq 'uninstall') { reg import \"$dir\\uninstall-context.reg\" }"
+    ],
     "checkver": {
         "url": "https://developers.cloudflare.com/cloudflare-one/team-and-resources/devices/cloudflare-one-client/download/",
         "regex": "Version: </strong>Windows ([\\d.]+)"
@@ -35,6 +51,8 @@
         }
     },
     "notes": [
+        "Default data folder `CloudflareData` is located in C:\\ProgramData\\Cloudflare",
+        "",
         "Cloudflare One depends on the warp-svc.exe service to function properly.",
         "Ensure that you have administrative privileges to start the service.",
         "",
