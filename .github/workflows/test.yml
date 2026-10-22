@@ -21,8 +21,10 @@ jobs:
 
       - name: Check xn Branch and Align with Current Branch
         shell: powershell
+        env:
+          CURRENT_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
-          $CURRENT_BRANCH = $env:GITHUB_REF_NAME
+          $CURRENT_BRANCH = $env:CURRENT_BRANCH
           $SCOOP_ROOT = (Get-Item (scoop prefix scoop)).Parent.Parent.Parent.FullName
           $XN_BUCKET_PATH = Join-Path $SCOOP_ROOT "buckets\xn"
           git -C $XN_BUCKET_PATH checkout $CURRENT_BRANCH
@@ -51,8 +53,10 @@ jobs:
 
       - name: Check xn Branch and Align with Current Branch
         shell: powershell
+        env:
+          CURRENT_BRANCH: ${{ github.head_ref || github.ref_name }}
         run: |
-          $CURRENT_BRANCH = $env:GITHUB_REF_NAME
+          $CURRENT_BRANCH = $env:CURRENT_BRANCH
           $SCOOP_ROOT = (Get-Item (scoop prefix scoop)).Parent.Parent.Parent.FullName
           $XN_BUCKET_PATH = Join-Path $SCOOP_ROOT "buckets\xn"
           git -C $XN_BUCKET_PATH checkout $CURRENT_BRANCH
