@@ -1,6 +1,6 @@
 name: test
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   test-powershell:
@@ -18,6 +18,14 @@ jobs:
       - name: Install xn bucket
         shell: powershell
         run: scoop bucket add xn https://github.com/Pengxn/xn
+
+      - name: Check xn Branch and Align with Current Branch
+        shell: powershell
+        run: |
+          $CURRENT_BRANCH = $env:GITHUB_REF_NAME
+          $SCOOP_ROOT = (Get-Item (scoop prefix scoop)).Parent.Parent.Parent.FullName
+          $XN_BUCKET_PATH = Join-Path $SCOOP_ROOT "buckets\xn"
+          git -C $XN_BUCKET_PATH checkout $CURRENT_BRANCH
 
       - name: Check Version and Test
         shell: powershell
@@ -40,6 +48,14 @@ jobs:
       - name: Install xn bucket
         shell: powershell
         run: scoop bucket add xn https://github.com/Pengxn/xn
+
+      - name: Check xn Branch and Align with Current Branch
+        shell: powershell
+        run: |
+          $CURRENT_BRANCH = $env:GITHUB_REF_NAME
+          $SCOOP_ROOT = (Get-Item (scoop prefix scoop)).Parent.Parent.Parent.FullName
+          $XN_BUCKET_PATH = Join-Path $SCOOP_ROOT "buckets\xn"
+          git -C $XN_BUCKET_PATH checkout $CURRENT_BRANCH
 
       - name: Check Version and Test
         shell: pwsh
