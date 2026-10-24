@@ -10,6 +10,19 @@
             "extract_dir": "PFiles64\\Tailscale"
         }
     },
+    "post_install": [
+        "'install-context', 'uninstall-context' | ForEach-Object {",
+        "    if (Test-Path \"$bucketsdir\\xn\\scripts\\tailscale\\$_.reg\") {",
+        "        $tsdir = \"$dir\".Replace('\\', '\\\\')",
+        "        $content = (Get-Content \"$bucketsdir\\xn\\scripts\\tailscale\\$_.reg\").Replace('$tsdir', $tsdir)",
+        "        if ($global) { $content = $content.Replace('HKEY_CURRENT_USER', 'HKEY_LOCAL_MACHINE') }",
+        "        Set-Content \"$dir\\$_.reg\" $content -Encoding Ascii -Force",
+        "    }",
+        "}",
+        "if (Test-Path \"$dir\\install-context.reg\") {",
+        "    reg import \"$dir\\install-context.reg\"",
+        "}"
+    ],
     "bin": [
         "tailscale.exe",
         "tailscale-ipn.exe",
@@ -20,6 +33,11 @@
             "tailscale-ipn.exe",
             "Tailscale"
         ]
+    ],
+    "pre_uninstall": [
+        "if ($cmd -eq 'uninstall') {",
+        "    reg import \"$dir\\uninstall-context.reg\"",
+        "}"
     ],
     "checkver": {
         "url": "https://pkgs.tailscale.com/stable/",
