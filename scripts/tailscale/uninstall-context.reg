@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\tailscale]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\tailscale\DefaultIcon]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\tailscale\shell]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\tailscale\shell\open]
+[-HKEY_CURRENT_USER\SOFTWARE\Classes\tailscale\shell\open\command]
