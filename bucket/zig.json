@@ -13,7 +13,7 @@
     "bin": "zig.exe",
     "checkver": {
         "url": "https://ziglang.org/download/",
-        "regex": ">([\\d.]+)</h"
+        "regex": "windows-(\\d+(?:\\.\\d+)+)\\.zip"
     },
     "autoupdate": {
         "architecture": {
